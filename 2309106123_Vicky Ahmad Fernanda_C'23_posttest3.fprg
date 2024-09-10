@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-03 11.21.09 PM"/>
+        <attribute name="created" value="VXNlcjtWSUNLWTsyMDIzLTEwLTAzOzA5LjU4LjE1IFBNOzIwNjQ="/>
+        <attribute name="edited" value="VXNlcjtWSUNLWTsyMDIzLTEwLTAzOzExLjIxLjA5IFBNOzM7MjE2MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Uang" type="Real" array="False" size=""/>
+            <declare name="Pesanan, Pesanannasigoreng, Pesananpisangkeju" type="String" array="False" size=""/>
+            <output expression="&quot;menu makanan nasi goreng, ayam goreng, pisang keju, kue bakar&quot;" newline="True"/>
+            <output expression="&quot;Masukkan Jumlah Uang anda&quot;" newline="True"/>
+            <input variable="Uang"/>
+            <if expression="Uang &lt;= 6.000">
+                <then>
+                    <output expression="&quot;Maaf, Uang anda tidak mencukupi untuk memesan makanan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="Uang &gt;=6.000 and Uang &lt;14.000">
+                        <then>
+                            <output expression="&quot;Pesanan = anda dapat memesan pisang keju (ya/tidak)&quot;" newline="True"/>
+                            <input variable="Pesanan"/>
+                            <if expression="Pesanan == &quot;ya&quot;">
+                                <then>
+                                    <output expression="&quot;Pesanan anda : Pisang Keju&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Terima Kasih&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="Uang &gt;= 14.000 and Uang &lt; 20.000">
+                                <then>
+                                    <output expression="&quot; Pesanan = Anda Dapat memesan nasi goreng, pisang keju, kue bakar, dan ayam goreng, apa yang ingin anda pesan? (nasi goreng/pisang keju/kue bakar/ayam goreng)&quot;" newline="True"/>
+                                    <input variable="Pesanan"/>
+                                    <if expression="Pesanan == &quot;nasi goreng&quot;">
+                                        <then>
+                                            <output expression="&quot;pesanan Anda : nasi goreng&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="Pesanan == &quot;pisang keju&quot;">
+                                                <then>
+                                                    <output expression="&quot;Pesanan Anda :  pisang keju&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="Pesanan == &quot;kue bakar&quot;">
+                                                        <then>
+                                                            <output expression="&quot;Pesanan Anda : kue bakar&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="Pesanan == &quot;ayam goreng&quot;">
+                                                                <then>
+                                                                    <output expression="&quot;Pesanan Anda : ayam goreng&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Maaf, pilihan tidak valid. Terima kasih banyak&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Pesanan_nasi_goreng = Anda dapat memesan nasi goreng. Apakah anda ingin memesannya? (ya/tidak): &quot;" newline="True"/>
+                                    <input variable="Pesanannasigoreng"/>
+                                    <output expression="&quot;Pesanan_pisang_keju = Anda dapat memesan pisang keju. Apakah anda ingin memesannya? (ya/tidak): &quot;" newline="True"/>
+                                    <input variable="Pesananpisangkeju"/>
+                                    <if expression="Pesanannasigoreng == &quot;ya&quot; and Pesananpisangkeju == &quot;ya&quot;">
+                                        <then>
+                                            <output expression="&quot;Pesanan Anda : nasi goreng dan pisang keju. terima kasih&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="pesanannasigoreng == &quot;ya&quot;">
+                                                <then>
+                                                    <output expression="&quot;Pesanan anda : nasi goreng &quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="pesananpisangkeju == &quot;ya&quot;">
+                                                        <then>
+                                                            <output expression="&quot;Pesanan anda : pisang keju&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;terima kasih&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

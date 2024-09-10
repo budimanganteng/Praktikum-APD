@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 09.52.22 PM"/>
+        <attribute name="created" value="VXNlcjtWSUNLWTsyMDIzLTA5LTI0OzA3LjQxLjQ1IFBNOzIwNjg="/>
+        <attribute name="edited" value="VXNlcjtWSUNLWTsyMDIzLTA5LTI0OzA5LjUyLjIyIFBNOzEyOzIyMjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Celsius, Farenheit, Reaumur, Kelvin" type="Real" array="False" size=""/>
+            <declare name="Modulus" type="Integer" array="False" size=""/>
+            <input variable="Celsius"/>
+            <output expression="Celsius" newline="False"/>
+            <assign variable="Farenheit" expression="(Celsius * 9/5) + 32"/>
+            <assign variable="Reaumur" expression="Celsius * 4/5"/>
+            <assign variable="Kelvin" expression="Celsius + 273.15"/>
+            <assign variable="Modulus" expression="Celsius%7"/>
+            <output expression="&quot; derajat celsius setara dengan &quot; &amp;Farenheit&amp; &quot; F, &quot; &amp;Reaumur&amp; &quot; derajat Reaumur dan &quot;  &amp;Kelvin&amp; &quot; Kelvin. &quot; &amp;Celsius&amp; &quot; modulus 7 &quot; &amp; &quot; sama dengan &quot; &amp;Modulus&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
